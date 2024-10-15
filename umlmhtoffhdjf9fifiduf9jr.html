@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sound Button</title>
+</head>
+<body>
+
+<button onclick="playRandomSound()">Play Random Sound</button>
+
+<audio id="sound1" src="https://noampro900.github.io/-3/31.m4a"></audio>
+<audio id="sound2" src="https://noampro900.github.io/-3/32.m4a"></audio>
+<audio id="sound3" src="https://noampro900.github.io/-3/33.m4a></audio>
+<audio id="sound4" src="https://noampro900.github.io/-3/34.m4a"></audio>
+<audio id="sound5" src="https://noampro900.github.io/-3/35.m4a"></audio>
+<audio id="sound6" src="https://noampro900.github.io/-3/36.m4a"></audio>
+<audio id="sound7" src="https://noampro900.github.io/-3/37.m4a"></audio>
+<audio id="sound8" src="https://noampro900.github.io/-3/38.m4a"></audio>
+<audio id="sound9" src="https://noampro900.github.io/-3/39.m4a"></audio>
+<audio id="sound10" src="https://noampro900.github.io/-3/310.m4a"></audio>
+<audio id="sound11" src="https://noampro900.github.io/-3/311.m4a"></audio>
+<audio id="sound12" src="https://noampro900.github.io/-3/312.m4a"></audio>
+<audio id="sound13" src="https://noampro900.github.io/-3/313.m4a"></audio>
+<audio id="sound14" src="https://noampro900.github.io/-3/314.m4a"></audio>
+<audio id="sound15" src="https://noampro900.github.io/-3/315.m4a"></audio>
+<audio id="sound16" src="https://noampro900.github.io/-3/316.m4a"></audio>
+<audio id="sound17" src="https://noampro900.github.io/-3/317.m4a"></audio>
+<audio id="sound18" src="2></audio>
+<audio id="sound19" src="https://noampro900.github.io/-3/318.m4a"></audio>
+<audio id="sound20" src="https://noampro900.github.io/-3/319.m4a"></audio>
+<audio id="sound21" src="https://noampro900.github.io/-3/320.m4a"></audio>
+<audio id="sound22" src="https://noampro900.github.io/-3/322.m4a"></audio>
+
+<script>
+    function playRandomSound() {
+        // Generate a random number between 1 and 22
+        const randomSoundIndex = Math.floor(Math.random() * 22) + 1;
+        
+        // Select the audio element based on the random index
+        const sound = document.getElementById('sound' + randomSoundIndex);
+        
+        // Stop any currently playing sound
+        const sounds = document.querySelectorAll('audio');
+        sounds.forEach(audio => audio.pause());
+
+        // Reset the sound to the beginning and play
+        sound.currentTime = 0;
+        sound.play();
+    }
+</script>
+
+</body>
+</html>
